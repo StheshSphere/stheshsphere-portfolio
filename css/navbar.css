@@ -1,0 +1,161 @@
+/* This is the navbar */
+.nav_icon_svg {
+    width: 32px;
+    height: 32px;
+}
+
+#dropdown-menu {
+    display: none;
+}
+
+header {
+    margin: 0 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    padding: 0;
+    /* Background color of the header */
+}
+
+a h6 {
+    display: inline-flex;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a h6:hover {
+    color: #1F93FF;
+    transform: scale(1.1);
+}
+
+.logo-container {
+    flex: 1;
+    /* Ensure logo stays on the left */
+}
+
+#ss_logo {
+    height: 70px;
+    transition: transform 0.3s ease;
+    /* Adjust size to fit better */
+}
+
+#ss_logo:hover {
+    transform: scale(1.1);
+}
+
+.dropdown-btn img {
+    width: 32px;
+    height: 32px;
+}
+
+nav {
+    flex: 2;
+    text-align: center;
+    /* Center the navigation items */
+}
+
+.nav-menu {
+    display: inline-block;
+    /* Keep navigation links in a row */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #000;
+    /* Navigation text color */
+    font-weight: bold;
+}
+
+#nav_icons {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#nav_icons li {
+    margin-left: 20px;
+    transition: fill 0.3s ease;
+    /* Space between icons */
+}
+
+.nav_icon_svg {
+    fill: #000;
+    transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.nav_icon_svg:hover {
+    transform: scale(1.1);
+    fill: #1F93FF;
+}
+
+
+/* For Phone size navigation */
+@media (max-width: 767px) {
+    header {
+        margin: 0 24px;
+    }
+
+    #nav_menu {
+        display: none;
+    }
+
+    #nav_icons {
+        justify-content: center;
+    }
+
+    #nav_icons li {
+        margin: 8px;
+        /* Space between icons */
+    }
+
+    /* #dropdown-menu {
+        display: contents;
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    } */
+    #dropdown-menu {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    header {
+        margin: 0;
+        padding: 0;
+    }
+
+    #ss_logo {
+        height: 70px;
+        justify-content: left;
+        /* Adjust size to fit better */
+    }
+
+    /* Styling for the dropdown menu icon */
+    .dropdown-btn img {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    #nav_icons {
+        display: none;
+    }
+}

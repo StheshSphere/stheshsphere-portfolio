@@ -1,0 +1,33 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    /* allows items to break to next line */
+    gap: 12px;
+    /* spacing between items */
+    margin: 0 32px;
+    padding: 20px 0;
+}
+
+footer h6 {
+    margin: 0;
+    transition: color 0.3s ease, transform 0.3s ease;
+
+    /* remove default spacing to ensure perfect alignment */
+}
+
+footer h6:hover {
+    color: #1F93FF;
+    transform: scale(1.1);
+}
+
+/* Smaller screens: stack items vertically */
+@media (max-width: 767px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        /* left-align items when stacked */
+        gap: 6px;
+    }
+}
