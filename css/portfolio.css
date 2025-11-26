@@ -1,0 +1,134 @@
+.project-group {
+    margin-top: 4rem;
+}
+
+.group-title {
+    text-align: left;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #062332;
+}
+
+/* Portfolio Section */
+.portfolio-section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+/* .portfolio-section div {
+    margin: 2.5rem 0;
+} */
+
+.portfolio-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.portfolio-subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Project Card */
+.project-card {
+    max-height: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    cursor: pointer;
+    align-content: center;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.project-thumb {
+    width: 100%;
+    /* height: 2600px; */
+    object-fit: cover;
+    transition: filter 0.3s ease;
+    height: 260px;
+    border-radius: 16px;
+    /* optional */
+}
+
+.project-card:hover .project-thumb {
+    filter: brightness(70%);
+}
+
+/* Project Info Overlay */
+.project-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1.2rem;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover .project-info {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* MODAL GALLERY */
+#gallery-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+}
+
+#gallery-modal img {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 12px;
+}
+
+#close-gallery {
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+}
+
+#gallery-controls {
+    margin-top: 1rem;
+    display: flex;
+    gap: 2rem;
+}
+
+#gallery-controls button {
+    font-size: 2rem;
+    padding: 0.5rem 1.2rem;
+    background: none;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+    border-radius: 6px;
+}

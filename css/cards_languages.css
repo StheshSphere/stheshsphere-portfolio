@@ -1,0 +1,237 @@
+#languages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#languages h2 {
+    padding: 0 5rem;
+}
+
+
+.card {
+    justify-content: space-between;
+    position: relative;
+    cursor: pointer;
+    margin: 0 40px;
+}
+
+.card .face {
+    width: 300px;
+    height: 200px;
+    transition: 0.5s ease;
+}
+
+.card .face.face1 {
+    position: relative;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+.card:hover .face.face1 {
+    background: rgb(227, 79, 38);
+    transform: translateY(0px);
+}
+
+.card:nth-child(2) .face.face2 {
+    box-shadow: 0 10px 50px #e34f26;
+}
+
+.card:nth-child(2) .face.face2 {
+    box-shadow: 0 10px 50px #e34f26;
+}
+
+.card:nth-child(2) .face.face1 .content h3,
+.card:nth-child(2) .face.face1 .content svg {
+    color: #e34f26;
+    fill: #e34f26;
+}
+
+.card:nth-child(3):hover .face.face1 {
+    background: blue;
+}
+
+.card:nth-child(3) .face.face2 {
+    box-shadow: 0 10px 50px blue;
+}
+
+.card:nth-child(3) .face.face1 .content h3,
+.card:nth-child(3) .face.face1 .content svg {
+    color: blue;
+    fill: blue;
+}
+
+.card:nth-child(4):hover .face.face1 {
+    background: yellow;
+}
+
+.card:nth-child(4) .face.face2 {
+    box-shadow: 0 10px 50px yellow;
+}
+
+.card:nth-child(4) .face.face1 .content h3,
+.card:nth-child(4) .face.face1 .content svg {
+    color: yellow;
+    fill: yellow;
+}
+
+.card:nth-child(5):hover .face.face1 {
+    background: linear-gradient(180deg, orange, #5382A1);
+}
+
+.card:nth-child(5) .face.face2 {
+    box-shadow: 0 10px 50px #5382A1;
+}
+
+.card:nth-child(5) .face.face1 .content h3,
+.card:nth-child(5) .face.face1 .content svg {
+    color: #5382A1;
+    fill: #5382A1;
+}
+
+.card:nth-child(6):hover .face.face1 {
+    background: #00599C;
+}
+
+.card:nth-child(6) .face.face2 {
+    box-shadow: 0 10px 50px #00599C;
+}
+
+.card:nth-child(6) .face.face1 .content h3,
+.card:nth-child(6) .face.face1 .content svg {
+    color: #00599C;
+    fill: #00599C;
+}
+
+.card:nth-child(7):hover .face.face1 {
+    background: #953CAD;
+}
+
+.card:nth-child(7) .face.face2 {
+    box-shadow: 0 10px 50px #953CAD;
+}
+
+.card:nth-child(7) .face.face1 .content h3,
+.card:nth-child(7) .face.face1 .content svg {
+    color: #953CAD;
+    fill: #953CAD;
+}
+
+.card:nth-child(8):hover .face.face1 {
+    background: gold;
+}
+
+.card:nth-child(8) .face.face2 {
+    box-shadow: 0 10px 50px gold;
+}
+
+.card:nth-child(8) .face.face1 .content h3,
+.card:nth-child(8) .face.face1 .content svg {
+    color: gold;
+    fill: gold;
+}
+
+.card:nth-child(9):hover .face.face1 {
+    background: linear-gradient(135deg, blue, yellow);
+}
+
+.card:nth-child(9) .face.face2 {
+    box-shadow: 0 10px 50px #3776AB;
+}
+
+.card:nth-child(9) .face.face1 .content h3,
+.card:nth-child(9) .face.face1 .content svg {
+    color: #3776AB;
+    fill: #3776AB;
+}
+
+.card:nth-child(10):hover .face.face1 {
+    background: linear-gradient(135deg, purple, blue);
+}
+
+.card:nth-child(10) .face.face2 {
+    box-shadow: 0 10px 50px #7F52FF;
+}
+
+.card:nth-child(10) .face.face1 .content h3,
+.card:nth-child(10) .face.face1 .content svg {
+    color: #7F52FF;
+    fill: #7F52FF;
+}
+
+.card .face.face2 {
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+}
+
+.card:hover .face.face2 {
+    transform: translateY(0px);
+}
+
+.card .face.face2 .content p {
+    font-size: 1rem;
+    font-family: consolas;
+    margin: 0;
+    padding: 0;
+}
+
+.card .face.face2 .content a {
+    margin: 8px 101px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    font-family: consolas;
+    color: #062332;
+    padding: 4px;
+    border: 1px solid #062332;
+}
+
+.card .face.face2 .content a:hover {
+    background: #062332;
+    color: #fff;
+}
+
+.card .face.face1 .content {
+    /* opacity: 0.2; */
+    transition: 0.5s;
+}
+
+.card:hover .face.face1 .content {
+    opacity: 1;
+}
+
+.card .face.face1 .content svg {
+    min-width: 100px;
+    transition: all 0.3 smooth;
+}
+
+.card:hover .face.face1 .content svg {
+    fill: black;
+}
+
+.card .face.face1 .content h3 {
+    margin: 20px 0 0;
+    padding: 0;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.card:hover .face.face1 .content h3 {
+    margin: 10px 0 0;
+    padding: 0;
+    color: black;
+    text-align: center;
+    font-size: 1.5em;
+}

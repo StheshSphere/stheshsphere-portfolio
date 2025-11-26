@@ -1,0 +1,149 @@
+#socials {
+    text-align: center;
+    align-content: center;
+}
+
+/*Anything related to the social media icons outside the navigation */
+.Icon_divs {
+    margin: 0%;
+}
+
+.Form_Socials {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0%;
+
+}
+
+.SocialsR {
+    width: 164px;
+    height: 164px;
+    background-color: white;
+    margin: 32px;
+    margin-top: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.R {
+    width: 64px;
+    height: 64px;
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
+
+.SocialsL {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    margin: 32px;
+    margin-top: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.L {
+    width: 80px;
+    height: 80px;
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.SocialsR:hover {
+    width: 172px;
+    height: 172px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+}
+
+.SocialsR:hover .R {
+    width: 68px;
+    height: 68px;
+}
+
+.SocialsL:hover {
+    width: 208px;
+    height: 208px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+}
+
+.SocialsL:hover .L {
+    width: 84px;
+    height: 84px;
+}
+
+/* Individual background hover effects */
+#X_BC:hover {
+    background-color: black;
+}
+
+#LI_BC:hover {
+    background-color: white;
+}
+
+#DI_BC:hover {
+    background-color: #5165F6;
+}
+
+#TG_BC:hover {
+    background-color: white;
+}
+
+#WA_BC:hover {
+    background-color: #8DC63F;
+}
+
+#FB_BC:hover {
+    background-color: #1877F2;
+}
+
+#IG_BC:hover {
+    background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+    ;
+    /* background-size: contain; */
+    /* background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c1dc01c7-3881-4ca5-b1d8-edf5019fa2bd/db1xp40-8df2211d-9b59-43cc-91c1-0b710f26fc58.jpg/v1/fill/w_1024,h_1024,q_75,strp/instagram_logo_gradient_rainbow_by_projectowl_db1xp40-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiJcL2ZcL2MxZGMwMWM3LTM4ODEtNGNhNS1iMWQ4LWVkZjUwMTlmYTJiZFwvZGIxeHA0MC04ZGYyMjExZC05YjU5LTQzY2MtOTFjMS0wYjcxMGYyNmZjNTguanBnIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.aXD7ADDG-AGgy195RA0QrAs6xiXVualHlTW5_YE0NZU); */
+}
+
+#X_BC:hover #X_IC {
+    fill: white;
+}
+
+#LI_BC:hover #LI_IC {
+    fill: #007BB5;
+}
+
+#DI_BC:hover #DI_IC {
+    fill: white;
+}
+
+#TG_BC:hover #TG_IC {
+    fill: #00AEED;
+}
+
+#WA_BC:hover #WA_IC {
+    fill: white;
+}
+
+#FB_BC:hover #FB_IC {
+    fill: white;
+}
+
+#IG_BC:hover #IG_IC {
+    fill: white;
+}
+
+.T_Color {
+    color: #1F93FF;
+}
+
+#div-one {
+    margin-bottom: 64px;
+}
