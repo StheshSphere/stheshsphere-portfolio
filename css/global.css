@@ -1,5 +1,28 @@
 body {
     align-content: center;
+    background-color: #F3FAFF;
+    text-align: center;
+    align-content: center;
+}
+
+section {
+    margin: 8rem 10%;
+}
+
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #DDD;
+    margin: 2.5rem 0;
+}
+
+.hr-none1 {
+    margin-top: 0;
+}
+
+.hr-none2 {
+    margin-bottom: 0;
 }
 
 h1,
@@ -8,103 +31,99 @@ h3,
 h4,
 h5,
 h6 {
+    text-align: center;
     font-family: montserrat, sans-serif;
-    margin-bottom: 32px;
-    margin-top: 32px;
+    margin: 2rem 0;
     font-weight: 700;
     line-height: 100%;
 }
 
 p {
     font-family: roboto, sans-serif;
-    font-size: 21px;
+    font-size: 1.3125rem;
     text-align: center;
-    margin-bottom: 32px;
-    margin-top: 32px;
+    margin: 2rem 0;
     font-weight: 400;
 }
 
+#mystory {
+    margin: 0% 20%;
+}
+
 h1 {
-    font-size: 84px;
+    font-size: 5.25rem;
 }
 
 h2 {
-    font-size: 60px;
-    font-weight: 300;
+    font-weight: 100;
+    font-size: 3.75rem;
     background: linear-gradient(90deg, #062332, #F3FAFF);
-    -webkit-background-clip: text;
     background-clip: text;
+    padding: 4px;
     color: transparent;
 }
 
 h3 {
-    font-size: 42px;
+    font-size: 2.625rem;
 }
 
 h4 {
-    font-size: 30px;
+    font-size: 1.875rem;
 }
 
 h5 {
     margin: 0;
-    font-size: 21px;
+    font-size: 1.3125rem;
 }
 
 h6 {
-    font-size: 15px;
+    font-size: 1.125rem;
 }
 
 /* Tablet size */
 @media (min-width:768px) and (max-width: 1200px) {
     section {
-        margin: 80px 10%;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p {
-        margin-bottom: 16px;
-        margin-top: 16px;
+        margin: 5.25rem 10%;
     }
 
     h1 {
-        font-size: 72px;
+        font-size: 4.5rem;
     }
 
     h2 {
-        font-size: 51px;
+        font-size: 3.1875rem;
     }
 
     h3 {
-        font-size: 36px;
+        font-size: 2.25rem;
     }
 
     h4 {
-        font-size: 25px;
+        font-size: 1.5625rem;
     }
 
     h5 {
-        font-size: 18px;
+        font-size: 1.125rem;
     }
 
     h6,
     label {
-        font-size: 13px;
+        font-size: 1rem;
     }
 
     p {
-        font-size: 18px;
+        font-size: 1.125rem;
+    }
+
+    #mystory {
+        margin: 0% 10%;
     }
 }
 
 /* Phone size */
 @media(max-width: 768px) {
     section {
-        margin: 64px 10%;
+        margin: 4rem 10%;
     }
 
     h1,
@@ -114,36 +133,40 @@ h6 {
     h5,
     h6,
     p {
-        margin-bottom: 24px;
-        margin-top: 24px;
+        margin-bottom: 1.5rem;
+        margin-top: 1.5rem;
     }
 
     h1 {
-        font-size: 44px;
+        font-size: 2.75rem;
     }
 
     h2 {
-        font-size: 35px;
+        font-size: 2.1875rem;
     }
 
     h3 {
-        font-size: 28px;
+        font-size: 1.75rem;
     }
 
     h4 {
-        font-size: 23px;
+        font-size: 1.4375rem;
     }
 
     h5 {
-        font-size: 18px;
+        font-size: 1.125rem;
     }
 
     h6,
     label {
-        font-size: 14px;
+        font-size: 1rem;
     }
 
     p {
-        font-size: 18px;
+        font-size: 1.125rem;
+    }
+
+    #mystory {
+        margin: 0% 0%;
     }
 }

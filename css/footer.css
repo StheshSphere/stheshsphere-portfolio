@@ -13,12 +13,13 @@ footer {
 footer h6 {
     margin: 0;
     transition: color 0.3s ease, transform 0.3s ease;
-
+    background: linear-gradient(45deg, #062332, #F3FAFF);
+    background-clip: text;
     /* remove default spacing to ensure perfect alignment */
 }
 
 footer h6:hover {
-    color: #1F93FF;
+    color: transparent;
     transform: scale(1.1);
 }
 

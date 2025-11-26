@@ -14,23 +14,27 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #ffffff;
     padding: 0;
     /* Background color of the header */
 }
 
 a h6 {
     display: inline-flex;
+    background: linear-gradient(45deg, #062332, #F3FAFF);
+    background-clip: text;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
+/* -webkit-background-clip: text; */
+
 a h6:hover {
-    color: #1F93FF;
+    color: transparent;
     transform: scale(1.1);
 }
 
 .logo-container {
     flex: 1;
+    text-align: justify;
     /* Ensure logo stays on the left */
 }
 
