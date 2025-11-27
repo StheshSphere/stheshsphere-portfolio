@@ -1,0 +1,248 @@
+/* TAB CONTAINER */
+.tool-tabs {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* TABS */
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.tab {
+    padding: 1.5em 2.5em;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: large;
+    border: 3px solid #bfbfbf;
+    background: linear-gradient(45deg,
+            #ff0000, #ff7300, #fffb00,
+            #48ff00, #00ffd5, #002bff,
+            #7a00ff, #ff00c8, #ff0000);
+    color: #bfbfbf;
+    cursor: pointer;
+    background-clip: text;
+    transition: 0.3s ease, transform ease-in 0.1s;
+    position: relative;
+    /* REQUIRED for glow positioning */
+    z-index: 1;
+}
+
+.tab::before {
+    content: '';
+    /* ENABLED */
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: calc(100% + 6px);
+    height: calc(100% + 6px);
+    border-radius: inherit;
+    background-clip: text;
+    background: linear-gradient(45deg,
+            #ff0000, #ff7300, #fffb00,
+            #48ff00, #00ffd5, #002bff,
+            #7a00ff, #ff00c8, #ff0000);
+    background-size: 400%;
+    filter: blur(6px);
+    z-index: -3;
+    opacity: 0;
+    /* Hidden by default */
+    transition: opacity .3s ease-in-out;
+    animation: glowing 20s linear infinite;
+}
+
+.tab.active {
+    /* .3s ease-in-out */
+    transform: scale(0.9);
+    background: white;
+    border-color: black;
+    color: black;
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+.tab:active:after {
+    background: transparent;
+}
+
+.tab.active::before {
+    opacity: 1;
+    /* Glow ON when active */
+}
+
+.tab:hover:before {
+    opacity: 1;
+}
+
+/* BASE BACKGROUND LAYER */
+.tab::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    inset: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background: #e6e6e6;
+    z-index: -3;
+    /* change the z index to 1 */
+}
+
+/* CONTENT PANELS */
+.tab-content {
+    display: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    animation: fadeIn 0.4s ease;
+}
+
+.tab-content.active {
+    display: flex;
+}
+
+/* TOOL CARDS */
+.tool-card {
+    width: 80px;
+    height: 110px;
+    padding: 20px;
+    justify-content: baseline;
+    font-size: 1rem;
+    background: white;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    text-align: center;
+    border: 3px solid grey;
+    color: grey;
+}
+
+.tool-card.tab.active,
+.tool-card:hover {
+    border: 3px solid black;
+    color: black;
+}
+
+#figma.active,
+#adobe.active,
+#adobe:hover,
+#figma:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 5px blue,
+        0 0 10px red,
+        0 0 15px orange,
+        0 0 20px purple,
+        0 0 25px green;
+
+}
+
+#canva.active,
+#canva:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 25px #0033ff;
+}
+
+#davinci.active,
+#davinci:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 10px red,
+        0 0 20px blue,
+        0 0 30px yellow;
+}
+
+#clipchamp.active,
+#clipchamp:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 25px purple;
+}
+
+#capcut.active,
+#capcut:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 25px black;
+}
+
+#vscode.active,
+#vscode:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 25px blue;
+}
+
+#android.active,
+#android:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 15px blue,
+        0 0 25px green;
+}
+
+#cursor.active,
+#cursor:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 25px black;
+}
+
+#supabase.active,
+#supabase:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 25px green;
+}
+
+.tool-card p {
+    font-size: 1rem;
+    margin: 8px 0;
+    font-weight: 600;
+}
+
+/* Default: all icons grey & slightly faded */
+.tool-card .svg-icon {
+    width: 56px;
+    height: auto;
+    transition: 0.3s ease;
+    filter: grayscale(100%) brightness(0.6);
+    opacity: 0.7;
+
+}
+
+/* WHEN TAB CONTENT IS ACTIVE — KEEP ICON COLORED */
+.tool-card.active .svg-icon {
+    filter: grayscale(0%) brightness(1);
+    opacity: 1;
+}
+
+/* WHEN CARD HOVERS — REMOVE GREY, COLOR RETURNS */
+.tool-card:hover .svg-icon {
+    filter: grayscale(0%) brightness(1);
+    opacity: 1;
+}
+
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

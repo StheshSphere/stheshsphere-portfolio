@@ -1,0 +1,165 @@
+#contact-section {
+    max-width: 900px;
+    margin: 0 2.5rem;
+    text-align: center;
+    /* ensures inner flex elements (like your row) stay centered */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact-section h2 {
+    margin-bottom: 0.5rem;
+}
+
+form {
+    width: 100%;
+    max-width: 600px;
+    /* perfect width for a form */
+    margin: 0 auto;
+    /* ensures center alignment */
+}
+
+/* CENTERING THE ROW */
+.row {
+    display: flex;
+    justify-content: center;
+    /* center the two inputs */
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    margin-bottom: 25px;
+    flex: 1;
+    /* both inputs take equal width */
+}
+
+.input-group.full {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* FLOATING LABEL */
+.input-group label {
+    font-family: montserrat, sans-serif;
+    position: absolute;
+    left: 12px;
+    top: 16px;
+    color: lightgrey;
+    background: transparent;
+    /* Always transparent */
+    font-size: 15px;
+    font-weight: 700;
+    pointer-events: none;
+    transition: 0.3s ease;
+    background: transparent;
+}
+
+.input-group input,
+.input-group textarea {
+    padding: 14px 12px;
+    font-size: 16px;
+    border-radius: 10px;
+    outline: none;
+
+    /* Transparent border but gradient wrapper */
+    border: 2px solid transparent;
+
+    background:
+        linear-gradient(#ffffff, #ffffff) padding-box,
+        linear-gradient(90deg, #062332, #F3FAFF) border-box;
+
+    transition: 0.35s ease;
+    transition: border 0.3s smooth;
+}
+
+/* Animated border glow on focus */
+.input-group input:focus,
+.input-group textarea:focus {
+    border: 3px solid transparent;
+    animation: glowBorder 2s ease infinite;
+    background:
+        linear-gradient(#ffffff, #ffffff) padding-box,
+        linear-gradient(120deg, #0b253a, #F3FAFF) border-box;
+}
+
+@keyframes glowBorder {
+    0% {
+        box-shadow: 0 0 0px #93b8d34d;
+    }
+
+    50% {
+        box-shadow: 0 0 24px #93b8d3b3;
+    }
+
+    100% {
+        box-shadow: 0 0 0px #93b8d34d;
+    }
+}
+
+/* When focused or typed in */
+.input-group input:focus+label,
+.input-group input:not(:placeholder-shown)+label,
+.input-group textarea:focus+label,
+.input-group textarea:not(:placeholder-shown)+label {
+    top: -16px;
+    left: 10px;
+    font-size: 13px;
+    background: transparent;
+    /* Make sure it's transparent */
+    padding: 0 6px;
+    color: #4a4a4a;
+}
+
+textarea {
+    height: 130px;
+    resize: none;
+}
+
+.send-btn {
+    margin-top: 25px;
+    padding: 16px 32px;
+    background: linear-gradient(135deg, #0b253a, #93b8d3);
+    border-radius: 40px;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.send-btn:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+.status {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+/* STACK INPUTS ON SMALL SCREENS */
+@media (max-width: 650px) {
+    #contact-section {
+        margin: 0 1rem;
+    }
+
+    .row {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .row .input-group {
+        width: 100%;
+    }
+}
