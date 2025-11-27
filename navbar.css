@@ -1,0 +1,205 @@
+/* This is the navbar */
+.nav_icon_svg {
+    width: 32px;
+    height: 32px;
+}
+
+#dropdown-menu {
+    display: none;
+}
+
+header {
+    margin: 0 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    padding: 0;
+    /* Background color of the header */
+}
+
+a h6 {
+    display: inline-flex;
+    background: linear-gradient(45deg, #062332, #F3FAFF);
+    background-clip: text;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* -webkit-background-clip: text; */
+
+a h6:hover {
+    color: transparent;
+    transform: scale(1.1);
+}
+
+.logo-container {
+    flex: 1;
+    text-align: justify;
+    /* Ensure logo stays on the left */
+}
+
+#ss_logo {
+    height: 70px;
+    transition: transform 0.3s ease;
+    /* Adjust size to fit better */
+}
+
+#ss_logo:hover {
+    transform: scale(1.1);
+}
+
+.dropdown-btn img {
+    width: 32px;
+    height: 32px;
+}
+
+nav {
+    flex: 2;
+    text-align: center;
+    /* Center the navigation items */
+}
+
+.nav-menu {
+    display: inline-block;
+    /* Keep navigation links in a row */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #000;
+    /* Navigation text color */
+    font-weight: bold;
+}
+
+#nav_icons {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#nav_icons li {
+    margin-left: 20px;
+    transition: fill 0.3s ease;
+    /* Space between icons */
+}
+
+.nav_icon_svg {
+    fill: #000;
+    transition: transform 0.3s ease, fill 0.3s ease;
+    background: linear-gradient(45deg, #062332, #F3FAFF);
+    background-clip: text;
+}
+
+.nav_icon_svg:hover {
+    transform: scale(1.1);
+    fill: black;
+    opacity: 0.5;
+}
+
+
+/* For Phone size navigation */
+@media (max-width: 767px) {
+    header {
+        margin: 0 24px;
+    }
+
+    #nav_menu {
+        display: none;
+    }
+
+    #nav_icons {
+        justify-content: center;
+    }
+
+    #nav_icons li {
+        margin: 8px;
+        /* Space between icons */
+    }
+
+    /* #dropdown-menu {
+        display: contents;
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    } */
+    #dropdown-menu {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    header {
+        margin: 0;
+        padding: 0;
+    }
+
+    #ss_logo {
+        height: 70px;
+        justify-content: left;
+        /* Adjust size to fit better */
+    }
+
+    /* Styling for the dropdown menu icon */
+    .dropdown-btn img {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    #nav_icons {
+        display: none;
+    }
+}
+
+/* MOBILE DROPDOWN MENU */
+#mobile-nav-links {
+    display: none;
+    /* hidden by default */
+    flex-direction: column;
+    background: #ffffff;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    /* under header */
+    left: 0;
+    padding: 20px 0;
+    list-style: none;
+    margin: 0;
+    border-top: 1px solid #dcdcdc;
+}
+
+#mobile-nav-links li {
+    padding: 12px 0;
+    text-align: center;
+}
+
+#mobile-nav-links a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #000;
+    font-weight: 600;
+}
+
+/* Only show dropdown on screens below 767px */
+@media (max-width: 767px) {
+    #dropdown-menu {
+        display: flex;
+        align-items: center;
+    }
+}
