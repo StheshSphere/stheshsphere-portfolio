@@ -3,16 +3,22 @@
 }
 
 .group-title {
-    text-align: left;
+    text-align: center;
     font-size: 2rem;
+    font-weight: 100;
     margin-bottom: 1.5rem;
-    color: #062332;
+    background: linear-gradient(90deg, #062332, #F3FAFF);
+    background-clip: text;
+    color: transparent;
 }
 
 /* Portfolio Section */
 .portfolio-section {
-    padding: 4rem 2rem;
+    padding: 0 1.2rem;
     text-align: center;
+}
+.portfolio-section h2 {
+    color: #062332;
 }
 
 /* .portfolio-section div {
@@ -77,12 +83,21 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    padding: 1.2rem;
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
     color: white;
     opacity: 0;
     transform: translateY(40px);
     transition: all 0.3s ease;
+}
+
+.project-info p {
+    margin: 0.5rem 1rem;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+.project-info h4 {
+    margin: 0.5rem 1rem 0;
 }
 
 .project-card:hover .project-info {
@@ -131,4 +146,11 @@
     border: 2px solid white;
     cursor: pointer;
     border-radius: 6px;
+}
+
+@media screen and (max-width: 600px) {
+    .portfolio-section {
+        padding: 0;
+    }
+
 }
